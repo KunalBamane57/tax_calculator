@@ -1,0 +1,104 @@
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+input.is-invalid,
+select.is-invalid {
+    border-color: red;
+}
+
+.invalid-feedback {
+    display: none;
+}
+
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input.is-invalid + .invalid-feedback,
+select.is-invalid + .invalid-feedback {
+    display: block;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner-box{
+    width: 50%;
+    padding: 40px;
+    padding-top: 90px;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+.btn{
+    width: 100%;
+    margin-top: 30px;
+    background-color: rgb(89, 20, 226);
+}
+span.dot {
+    display: inline-block;
+    width: 20px;
+    height: 20px; 
+    border-radius: 50%; 
+    border: 1px solid gray; 
+    text-align: center;
+    line-height: 12px; 
+    padding: 2px; 
+    margin-left: 5px; 
+    background-color: #fff; 
+    color: #000;
+}
+
+.form-group label{
+    font-weight: 600;
+}
+.modal-dialog{
+    height: 600px;
+}
+.modal-dialog {
+    max-width: calc(60% - 200px); 
+    max-height: calc(100% - 550px);
+}
+
+.modal-content {
+    margin-top: 460px;
+    width: calc(100% + 200px); 
+    height: calc(100% + 330px);
+    display: flex;
+    padding-top: 120px;
+    align-items: center;
+    text-align: center;
+}
+.modal-header{
+    border: none;
+    padding: 5px 5px;
+}
+.modal-body{
+    padding: 0px 0px;
+}
+.inner-p{
+    margin-bottom: 0;
+}
+.modal-footer{
+    border: none;
+    margin-bottom: 130px;
+}
+
+.input{
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+.input input{
+    border: none;
+    outline: 0;
+}
+.info{
+    margin-right: 5px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="inner-box">
+            <form id="taxCalculatorForm">
+                <div class="form-group">
+                    <label for="income">Enter gross annual income<span class="dot" data-toggle="tooltip" data-placement="top" title="Gross annual income is your total salary in a year before any deductions">?</span></label>
+                    <div class="input">
+                        <input type="text" class="form-control shadow-none" id="income" placeholder="Enter gross annual income"
+                            name="income" required>
+                        <span class="dot info" style="display: none;" data-toggle="tooltip" data-placement="top" title="Please enter numbers only">!</span>
+                    </div>
+                    <div class="invalid-feedback">Please enter a valid income.</div>
+                </div>
+                <div class="form-group">
+                    <label for="extraIncome">Enter extra income <span class="dot" data-toggle="tooltip" data-placement="top" title="Extra income is your total income by a side business">?</span></label>
+                    <div class="input">
+                        <input type="text" class="form-control shadow-none" id="extraIncome" placeholder="Enter extra income from other sources"
+                            name="extraIncome" required>
+                        <span class="dot info" style="display: none;" data-toggle="tooltip" data-placement="top" data-background="gray" title="Please enter numbers only">!</span>
+                    </div>
+                    <div class="invalid-feedback">Please enter a valid income.</div>
+                </div>
+                <div class="form-group">
+                    <label for="ageRange">Enter age group <span class="dot" data-toggle="tooltip" data-placement="top" title="Check your age and select accordingly">?</span></label>
+                    <select class="form-control shadow-none" id="ageRange" name="ageRange" required>
+                        <option value="" disabled selected></option>
+                        <option value="<40">&lt;40</option>
+                        <option value="40-59">≥ 40 &amp; &lt; 60</option>
+                        <option value="≥60">≥ 60</option>
+                    </select>
+                    <div class="invalid-feedback">Age range is required.</div>
+                </div>
+                <div class="form-group">
+                    <label for="deductions">Enter total applicable deductions <span class="dot" data-toggle="tooltip" data-placement="top" title="Extra deductions you have spend in the year">?</span></label>
+                    <div class="input">
+                        <input type="text" class="form-control shadow-none" id="deductions" placeholder="Add total applicable deductions"
+                            name="deductions" required>
+                        <span class="dot info" style="display: none;" data-toggle="tooltip" data-placement="top" title="Please enter numbers only">!</span>
+                    </div>
+                    <div class="invalid-feedback">Please enter a valid deduction amount.</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="resultModalLabel">Your overall income will be</h3>
+                    </div>
+                    <div class="modal-body" id="resultModalBody">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
